@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_profile"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+tools:context="com.ctg.fitgram.ProfileActivity">
+
+<ProgressBar
+    android:id="@+id/progress"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="@dimen/button_margin" />
+
+    <ImageView
+        android:id="@+id/ProfilePicImageView"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+
+        android:layout_above="@+id/btn_change_password"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress"
+        android:layout_toEndOf="@+id/progress"
+        android:layout_toRightOf="@+id/progress">
+
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_change_password"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableRight="@drawable/ic_lock"
+        android:paddingLeft="@dimen/button_padding"
+        android:text="Change Password" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn_change_password"
+        android:layout_alignRight="@+id/btn_change_password"
+        android:layout_below="@+id/btn_change_password"
+        android:layout_marginTop="@dimen/button_margin"
+        android:drawableRight="@drawable/ic_exit"
+        android:paddingLeft="@dimen/button_padding"
+        android:text="Logout" />
+
+    <Button
+
+        android:id="@+id/btn_edit_profile"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn_logout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btn_logout"
+        android:layout_below="@+id/btn_logout"
+        android:layout_marginTop="32dp"
+        android:onClick="startEditProfileActivity"
+        android:text="Edit Profile" />
+
+
+    <Button
+        android:id="@+id/continueToTImelineButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn_edit_profile"
+        android:layout_alignRight="@+id/btn_edit_profile"
+        android:layout_below="@+id/btn_edit_profile"
+        android:onClick="continueToTimeline"
+        android:text="Continue" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/card_items_margin"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/card_items_margin" />
+    </RelativeLayout>
+
+</RelativeLayout>
